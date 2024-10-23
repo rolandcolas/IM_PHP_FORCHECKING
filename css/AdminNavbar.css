@@ -1,0 +1,69 @@
+/* AdminNavbar.css */
+.admin-navbar {
+    background-image: url('../images/HCDC.png'); /* Specify your image path */
+    background-size: cover; /* Cover the entire navbar */
+    background-position: center; /* Center the image */
+    padding: 10px 20px; /* Padding for the navbar */
+    height: 250px;
+    border-radius: 10px;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between; /* Space between logos and links */
+    align-items: center; /* Align items vertically in the center */
+}
+
+.nav-logos {
+    display: flex;
+    gap: 10px; /* Space between logos */
+}
+
+.nav-links {
+    list-style: none; /* Remove default list styling */
+    display: flex; /* Make the list items display inline */
+    gap: 15px; /* Space between links */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+.nav-links li {
+    position: relative; /* Position relative to allow absolute positioning of the hover effect */
+}
+
+.nav-links a {
+    text-decoration: none; /* Remove underline from links */
+    color: #ffffff; /* Change to a contrasting color for visibility */
+    font-weight: bold; /* Make the links bold */
+    padding: 10px 15px; /* Add padding for a larger clickable area */
+    display: inline-block; /* Ensure the link is treated as a block for the hover effect */
+    transition: color 0.3s; /* Smooth transition for text color */
+}
+
+.nav-links a:hover {
+    color: #fffcfc; /* Change color on hover for better visibility */
+}
+
+/* Square hover effect */
+.nav-links li::after {
+    content: ''; /* Create a pseudo-element */
+    position: absolute; /* Position absolutely within the <li> */
+    left: 0; /* Align to the left */
+    right: 0; /* Align to the right */
+    top: 0; /* Align to the top */
+    bottom: 0; /* Align to the bottom */
+    background-color: rgba(0, 0, 0, 0.377); /* Semi-transparent background color */
+    opacity: 0; /* Start hidden */
+    transition: opacity 0.3s; /* Smooth transition for opacity */
+    z-index: -1; /* Place behind the text */
+}
+
+.nav-links li:hover::after {
+    opacity: 10; /* Show the hover effect on hover */
+}
+
+.logo-img {
+    height: 80px; /* Set height for both logos */
+    width: auto;  /* Maintain aspect ratio */
+    
+}
